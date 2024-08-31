@@ -1,0 +1,39 @@
+# 参考：https://zenn.dev/yoshii0110/articles/83e319ed20800e
+
+# 全てのユーザーを取得
+GET http://localhost:3000/user
+Content-Type: application/json
+
+###
+
+# IDを指定して１ユーザーを取得
+GET  http://localhost:3000/user/5
+Content-Type: application/json
+
+###
+
+# データの新規登録
+POST http://localhost:3000/user
+Content-Type: application/json
+
+{
+    "name": "hoge",
+    "email": "hoge@hoge.co.jp"
+}
+
+###
+
+# IDを指定してデータを更新
+PUT http://localhost:3000/user/6
+Content-Type: application/json
+
+{
+    "name": "fuga",
+    "email": "fuga@hoge.co.jp"
+}
+
+###
+
+# IDを指定してユーザーを削除
+DELETE http://localhost:3000/user/6
+Content-Type: application/json
