@@ -1,0 +1,5 @@
+▪️サーバー起動
+npm start
+
+▪️Prisma Studio（DBをGUIで確認）起動
+npx prisma studio
