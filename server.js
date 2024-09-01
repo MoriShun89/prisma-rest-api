@@ -1,6 +1,7 @@
 // （１）必要なパッケージをインポートする
 const express = require('express');
 const { PrismaClient } = require('@prisma/client');
+const cors = require('cors');
 
 // （２）新しくインスタンスを作る
 const prisma = new PrismaClient();
@@ -10,6 +11,7 @@ const app = express();        // アプリのインスタンス
 // HTTPリクエストのボディを解析してJSONとして利用できるようにする
 // このように書くことで、JSON形式で送信されたPOSTリクエストのデータを扱うことができる
 app.use(express.json());
+app.use(cors());
 
 // ルートパスへのGETリクエストハンドラを追加
 app.get('/', (req, res) => {
